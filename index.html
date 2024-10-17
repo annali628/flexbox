@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: cursive;
+      }
+
+      ul {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        justify-content: space-between;
+        background-color: lightseagreen;
+
+        /* padding: 1rem 2rem -> 1rem top/bottom, 2rem left/right */
+        padding: 1rem 2rem;
+      }
+
+      .right-nav {
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      .right-nav > li {
+        margin-left: 1rem;
+      }
+
+      .posts {
+        display: flex;
+        /* wraps child to the next line IF it's taking up too much space */
+        flex-wrap: wrap;
+      }
+
+      .posts > p {
+        /* 33% because I want each element to take up 33% of the screen */
+        /* - 2rem because there is a 1rem margin on each side */
+        width: calc(33% - 2rem);
+        margin: 1rem;
+        /* borders are added to the width of the box */
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- you can nest flex containers -->
+    <ul>
+      <li>Home</li>
+      <div class="right-nav">
+        <li>About Me</li>
+        <li>Contact Me</li>
+      </div>
+    </ul>
+
+    <div class="posts">
+      <p>
+        Lorem ipsum odor amet, consectetuer adipiscing elit. Risus donec
+        consequat faucibus, gravida purus purus. Eleifend semper amet class
+        gravida pretium fames at dignissim volutpat. Porttitor aliquet interdum
+        class sit porta aptent risus porta curabitur. Ridiculus ipsum libero
+        curae montes eget interdum. Inceptos quam iaculis erat feugiat enim
+        consectetur ac ullamcorper ut. Est inceptos curae sit; felis senectus
+        neque aenean euismod. Proin egestas magnis laoreet netus volutpat. Nunc
+        nostra nulla neque fusce nam volutpat vestibulum vivamus. Torquent
+        senectus felis vulputate mi lacinia viverra montes elementum sit.
+      </p>
+      <p>
+        Ullamcorper nam mattis inceptos tempus tempor lacinia dapibus. Ipsum
+        habitant habitasse vitae mollis ridiculus aliquet. Velit risus luctus
+        accumsan dolor vulputate. Ex fusce iaculis nunc semper imperdiet. Id
+        quisque rutrum justo lacinia, torquent justo nunc lobortis. Elementum
+        suscipit potenti; massa sed accumsan morbi eros porttitor dolor.
+        Condimentum ridiculus feugiat sodales orci neque ornare. Cursus purus
+        sollicitudin turpis pulvinar pellentesque.
+      </p>
+      <p>
+        Hac mi scelerisque interdum nec facilisi fermentum aenean. Tellus class
+        diam sagittis; praesent aliquam molestie orci mollis. Interdum nam
+        luctus at sapien platea amet. Facilisi duis erat curae morbi hac fusce.
+        Nulla ipsum lacus maecenas dis varius facilisis feugiat. At enim
+        adipiscing tristique proin natoque nam interdum, aliquet ridiculus.
+        Dictum penatibus sed laoreet porttitor euismod nulla.
+      </p>
+      <p>
+        Eleifend eleifend tempor conubia vel dui. Lacinia mus adipiscing
+        inceptos enim iaculis erat porta. Vestibulum dui non hac a imperdiet
+        platea. Imperdiet penatibus diam elementum lorem cursus montes congue.
+        Condimentum eleifend mi mattis massa tempor at. Sapien consectetur est
+        torquent vivamus metus eleifend. Rutrum porttitor habitant nunc at
+        potenti sociosqu at.
+      </p>
+    </div>
+  </body>
+</html>

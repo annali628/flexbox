@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox</title>
+
+    <style>
+      body {
+        margin: 0;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      .container {
+        /* flex makes the children take as little space as possible */
+        display: flex;
+        /* takes each child and puts space between them respective to this flex container */
+        justify-content: space-between;
+
+        /* the opposite direction of justify-content */
+        align-items: space-between;
+      }
+
+      /* all p tags directly under .container */
+      .container > p {
+        border: 2px solid red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <p>hello123</p>
+      <p>321olleh</p>
+    </div>
+  </body>
+</html>
+
+<!-- 
+
+Flexbox is reliant on containers
+ 
+lorem ipsum generator - text generator ... used as a placeholder
+
+-->
